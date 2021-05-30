@@ -1,7 +1,16 @@
 import ReactDOM from 'react-dom';
-import { App } from './App';
+import {ApolloClient, InMemoryCache} from '@apollo/client';
+import {ApolloProvider} from "@apollo/client/react";
+import {App} from './app';
+
+const client = new ApolloClient({
+    uri: 'http://localhost:4000',
+    cache: new InMemoryCache()
+});
 
 ReactDOM.render(
-    <App />,
+    <ApolloProvider client={client}>
+        <App/>
+    </ApolloProvider>,
     document.getElementById('root')
 );

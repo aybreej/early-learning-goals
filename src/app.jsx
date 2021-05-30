@@ -11,7 +11,7 @@ import {
     PageSectionVariants
 } from '@patternfly/react-core';
 
-import GoalSetting from './pages/GoalSetting';
+import GoalSetting from './pages/goal-setting';
 
 const TopNav = () => {
 
@@ -20,7 +20,7 @@ const TopNav = () => {
     const onSelect = result => setActiveItem(result.itemId);
 
     return (
-        <Nav onSelect={onSelect}>
+        <Nav onSelect={onSelect} variant="horizontal">
             <NavList>
                 <NavItem id="default-link1" to="#default-link1" itemId={0} isActive={activeItem === 0}>
                     Link 1

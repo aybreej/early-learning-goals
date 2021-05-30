@@ -1,12 +1,12 @@
 import React from 'react';
 import {Card, Grid, GridItem} from "@patternfly/react-core";
+import ChildrenDetail from "../goal-setting/children-detail";
 
-export default function GoalSetting(props) {
-    return (
+const GoalSetting = (props) => (
         <Grid hasGutter>
             <GridItem span={2}>
                 <Card>
-                    Card 1
+                    <ChildrenDetail />
                 </Card>
             </GridItem>
             <GridItem span={10} rowSpan={3}>
@@ -26,4 +26,5 @@ export default function GoalSetting(props) {
             </GridItem>
         </Grid>
     );
-}
+
+export default GoalSetting;
